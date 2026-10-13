@@ -6,7 +6,7 @@ import React from "react";
 
 export default function Banner() {
   return (
-    <div className="relative w-full h-[1200px]  bg-[url('/assets/hero_frame.png')] bg-cover bg-center bg-no-repeat">
+    <div className="relative w-full h-300  bg-[url('/assets/hero_frame.png')] bg-cover bg-center bg-no-repeat">
       <Header />
 
       <div className="max-w-230 mx-auto text-center">

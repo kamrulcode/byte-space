@@ -75,9 +75,9 @@ export default function Home() {
         )}
       </section>
       <main className="bytespace-page">
-        <CategorySection />
+        {/* <CategorySection />
         <GrowthSection />
-        <ManagementSection />
+        <ManagementSection /> */}
 
         <section id="courses" className="sr-only">
           <h2>Explore courses and creator tools</h2>
