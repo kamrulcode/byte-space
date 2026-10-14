@@ -39,7 +39,7 @@ export const courses: Course[] = [
     title: "Learn Figma from Basic",
     category: "UI/UX Design",
     image:
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24d?auto=format&fit=crop&w=800&q=85",
+      "https://images.unsplash.com/photo-1587355760421-b9de3226a046?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     rating: 4.5,
     lessons: 17,
     duration: "2 hours 16 mins",
@@ -117,5 +117,29 @@ export const courses: Course[] = [
     price: 25,
     instructor: "peruper studio",
     level: "Beginner",
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Sarah M.",
+    role: "Enthusiastic Learner",
+    image: "https://i.pravatar.cc/160?img=47",
+    review:
+      "ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning.",
+  },
+  {
+    name: "James L.",
+    role: "Lifelong Learner",
+    image: "https://i.pravatar.cc/160?img=12",
+    review:
+      "I've tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development.",
+  },
+  {
+    name: "Alex B.",
+    role: "Inspired Creator",
+    image: "https://i.pravatar.cc/160?img=11",
+    review:
+      "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It's fulfilling to see my courses making a positive impact on learners globally.",
   },
 ];

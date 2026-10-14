@@ -56,14 +56,14 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           <Link
-            href="/login"
+            href="/signin"
             passHref
             className="px-4 py-2 text-base font-normal font-satoshi"
           >
             sign in
           </Link>
           <Link
-            href="/signup"
+            href="/register"
             passHref
             className="px-4 py-2 text-base font-normal font-satoshi"
           >

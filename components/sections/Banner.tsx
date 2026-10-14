@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
-import Header from "@/components/ui/Header";
+import Header from "@/components/layout/Header";
 import { InputGroupInlineStart } from "@/components/ui/search";
 import Image from "next/image";
-import React from "react";
 
 export default function Banner() {
   return (
-    <div className="relative w-full h-300  bg-[url('/assets/hero_frame.png')] bg-cover bg-center bg-no-repeat">
+    <div className="relative w-full h-300  bg-[url('/assets/Hero_Frame.png')] bg-cover bg-center bg-no-repeat">
       <Header />
 
       <div className="max-w-230 mx-auto text-center">
@@ -17,9 +16,12 @@ export default function Banner() {
           Unlock your creativity, gain valuable knowledge, and grow your
           business with our wide range of courses.
         </p>
-        <div className="flex items-center justify-center h-13 gap-4">
+        <div className="flex items-center justify-center h-13 gap-2">
           <InputGroupInlineStart />
-          <Button variant="secondary" className=" bg-amber-300 rounded-full">
+          <Button
+            variant="secondary"
+            className=" bg-amber-300 rounded-full h-13 text-lg w-32"
+          >
             Search
           </Button>
         </div>
@@ -65,7 +67,7 @@ export default function Banner() {
           height={300}
         />
       </div>
-      <div className="absolute top-70 left-0  animate-[rotateX_8s_linear_infinite] transform-3d ">
+      <div className="absolute top-70 left-0 ">
         <Image
           src="/assets/3d_icons/Frame1.png"
           alt="Hero Image"
@@ -78,6 +80,30 @@ export default function Banner() {
           src="/assets/3d_icons/Frame.png"
           alt="Hero Image"
           width={188}
+          height={188}
+        />
+      </div>
+      <div className="absolute bottom-90 left-160 ">
+        <Image
+          src="/assets/hero_card_title.png"
+          alt="Hero Image"
+          width={188}
+          height={188}
+        />
+      </div>
+      <div className="absolute bottom-80 right-150 ">
+        <Image
+          src="/assets/hero_card.png"
+          alt="Hero Image"
+          width={188}
+          height={188}
+        />
+      </div>
+      <div className="absolute bottom-20 left-140 ">
+        <Image
+          src="/assets/hero_card_group.png"
+          alt="Hero Image"
+          width={230}
           height={188}
         />
       </div>

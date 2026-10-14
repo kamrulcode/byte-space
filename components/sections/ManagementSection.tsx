@@ -1,7 +1,7 @@
 "use client";
 
 import { CircleCheck, Star, ArrowUpRight } from "lucide-react";
-import DashboardCards from "./DashboardCards";
+import DashboardCards from "@/components/courses/DashboardCards";
 import Image from "next/image";
 
 export default function ManagementSection() {
@@ -20,14 +20,14 @@ export default function ManagementSection() {
     "https://i.pravatar.cc/80?img=11",
   ];
   return (
-    <section className="feature-section management-section">
-      <div className="site-container management-container">
+    <section className="feature-section management-section ">
+      <div className="site-container management-container flex justify-between items-center">
         <div className="management-visual">
           <DashboardCards />
 
           <div className="management-student">
             <Image
-              src="/images/student-management.png"
+              src="/assets/management.png"
               alt="Course creator managing online learning"
               fill
               sizes="(max-width: 768px) 80vw, 560px"

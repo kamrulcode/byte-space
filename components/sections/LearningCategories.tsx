@@ -7,14 +7,6 @@ import {
   Building2,
   Megaphone,
   Camera,
-  CircleCheck,
-  BookOpen,
-  Clock3,
-  MessageCircle,
-  Star,
-  Users,
-  ArrowUpRight,
-  GraduationCap,
 } from "lucide-react";
 
 const categories = [

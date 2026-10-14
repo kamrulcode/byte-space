@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CoursePreview from "./CoursePreview";
+import CoursePreview from "@/components/courses/CoursePreview";
 
 export default function GrowthSection() {
   return (
@@ -47,7 +47,7 @@ export default function GrowthSection() {
 
           <div className="growth-student">
             <Image
-              src="/images/student-growth.png"
+              src="/assets/hero-img.png"
               alt="Student learning with a laptop"
               fill
               priority
