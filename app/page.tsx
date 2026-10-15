@@ -1,19 +1,19 @@
 "use client";
-import Banner from "@/sections/banner/Banner";
+import Banner from "@/components/sections/Banner";
 
 import { useMemo, useState } from "react";
 
-import LogoStrip from "@/components/LogoStrip";
-import CourseCard from "@/components/CourseCard";
-import { courses } from "@/data/courses";
-import CategoryFilters from "@/components/CategoryFilters";
-import CategorySection from "@/components/LearningCategories";
-import GrowthSection from "@/components/GrowthtSection";
-import ManagementSection from "@/components/ManagementSection";
+import LogoStrip from "@/components/sections/LogoStrip";
+import CourseCard from "@/components/courses/CourseCard";
+import { courses } from "@/data/data";
+import CategoryFilters from "@/components/courses/CategoryFilters";
+import CategorySection from "@/components/sections/LearningCategories";
+import GrowthSection from "@/components/sections/GrowthSection";
+import ManagementSection from "@/components/sections/ManagementSection";
 import { GraduationCap } from "lucide-react";
-import CreatorBanner from "@/components/CreatorBanner";
-import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
+import CreatorBanner from "@/components/sections/CreatorBanner";
+import Testimonials from "@/components/sections/Testimonials";
+import Footer from "@/components/layout/Footer";
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("Featured");
 
@@ -38,7 +38,7 @@ export default function Home() {
           Build Your Skills
         </h1>
 
-        <p className="mx-auto mt-2 max-w-4xl text-lg leading-[1.7] text-[#9296a1]">
+        <p className="mx-auto mt-4 mb-15 max-w-4xl text-lg leading-[1.7] text-[#9296a1]">
           At Bytespace Courses, we bring you closer to life-changing knowledge.
           Explore a variety of courses across different fields, from technology
           to the arts, and make a difference in your career and life.
@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* Courses grid */}
-      <section className="mainContainer  px-5 pb-10">
+      <section className="mainContainer  px-5 pb-10 mt-15">
         {filteredCourses.length > 0 ? (
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {filteredCourses.map((course) => (

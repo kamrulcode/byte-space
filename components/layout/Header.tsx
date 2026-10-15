@@ -34,14 +34,14 @@ const Header = () => {
               />
             </svg>
           </label>
-          <button className="btn btn-ghost text-xl">
+          <Link href="/" passHref>
             <Image
               src="/assets/Header_Logo.svg"
               alt="Logo"
               width={171}
               height={37}
             />
-          </button>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -56,14 +56,14 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           <Link
-            href="/login"
+            href="/signin"
             passHref
             className="px-4 py-2 text-base font-normal font-satoshi"
           >
             sign in
           </Link>
           <Link
-            href="/signup"
+            href="/register"
             passHref
             className="px-4 py-2 text-base font-normal font-satoshi"
           >

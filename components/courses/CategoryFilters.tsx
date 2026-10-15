@@ -1,6 +1,6 @@
 "use client";
 
-import { categories } from "@/data/courses";
+import { categories } from "@/data/data";
 
 interface CategoryFiltersProps {
   activeCategory: string;

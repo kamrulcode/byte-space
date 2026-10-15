@@ -7,14 +7,6 @@ import {
   Building2,
   Megaphone,
   Camera,
-  CircleCheck,
-  BookOpen,
-  Clock3,
-  MessageCircle,
-  Star,
-  Users,
-  ArrowUpRight,
-  GraduationCap,
 } from "lucide-react";
 
 const categories = [
@@ -50,7 +42,7 @@ export default function CategorySection() {
                 <Icon size={25} strokeWidth={2.5} />
               </span>
 
-              <span>{title}</span>
+              <span className=" font-bold">{title}</span>
             </button>
           ))}
         </div>

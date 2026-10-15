@@ -6,7 +6,7 @@ import {
   UsersRound,
 } from "lucide-react";
 
-import type { Course } from "@/data/courses";
+import type { Course } from "@/data/data";
 
 interface CourseCardProps {
   course: Course;
@@ -75,7 +75,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             />
           ))}
 
-          <span className="ml-.75 flex h-4.25 w-5.5 items-center justify-center rounded-full border border-white bg-[#d7ff19] text-[7px] font-bold text-[#242b0c]">
+          <span className="ml-.75 flex h-4.25 w-5.5 items-center justify-center rounded-full border border-white bg-[#d7ff19] text-xs font-bold text-[#242b0c] p-4 ">
             26+
           </span>
         </div>

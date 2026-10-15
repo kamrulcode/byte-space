@@ -14,7 +14,7 @@ export default function CoursePreview() {
     <article className="course-preview">
       <div className="course-preview-image">
         <Image
-          src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24d?auto=format&fit=crop&w=900&q=85"
+          src="https://images.unsplash.com/photo-1587355760421-b9de3226a046?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
           alt="Students learning digital design"
           fill
           unoptimized
