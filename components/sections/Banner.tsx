@@ -26,7 +26,7 @@ export default function Banner() {
           </Button>
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+      <div className="absolute  bottom-0 left-1/3 ">
         <Image
           src="/assets/hero-img.png"
           alt="Hero Image"
@@ -35,7 +35,7 @@ export default function Banner() {
         />
       </div>
 
-      <div className="absolute top-70 right-0 ">
+      <div className="absolute top-70 right-0">
         <Image
           src="/assets/3d_icons/Cone1.png"
           alt="Hero Image"
@@ -43,7 +43,7 @@ export default function Banner() {
           height={260}
         />
       </div>
-      <div className="absolute top-140 right-50 ">
+      <div className="absolute top-140 right-50 banner-float-3d banner-float-3d-b">
         <Image
           src="/assets/3d_icons/Cone.png"
           alt="Hero Image"
@@ -51,7 +51,7 @@ export default function Banner() {
           height={188}
         />
       </div>
-      <div className="absolute top-210 right-25 ">
+      <div className="absolute top-210 right-25 banner-float-3d banner-float-3d-c">
         <Image
           src="/assets/3d_icons/Frame2.png"
           alt="Hero Image"
@@ -59,7 +59,7 @@ export default function Banner() {
           height={300}
         />
       </div>
-      <div className="absolute top-210 left-25 ">
+      <div className="absolute top-210 left-25 banner-float-3d banner-float-3d-d">
         <Image
           src="/assets/3d_icons/Cone2.png"
           alt="Hero Image"
@@ -75,7 +75,7 @@ export default function Banner() {
           height={260}
         />
       </div>
-      <div className="absolute top-140 left-50 ">
+      <div className="absolute top-140 left-50 banner-float-3d banner-float-3d-f">
         <Image
           src="/assets/3d_icons/Frame.png"
           alt="Hero Image"
@@ -83,7 +83,7 @@ export default function Banner() {
           height={188}
         />
       </div>
-      <div className="absolute bottom-90 left-160 ">
+      <div className="absolute bottom-90 left-160 banner-float-card banner-float-card-a">
         <Image
           src="/assets/hero_card_title.png"
           alt="Hero Image"
@@ -91,7 +91,7 @@ export default function Banner() {
           height={188}
         />
       </div>
-      <div className="absolute bottom-80 right-150 ">
+      <div className="absolute bottom-80 right-150 banner-float-card banner-float-card-b">
         <Image
           src="/assets/hero_card.png"
           alt="Hero Image"
@@ -99,7 +99,7 @@ export default function Banner() {
           height={188}
         />
       </div>
-      <div className="absolute bottom-20 left-140 ">
+      <div className="absolute bottom-20 left-140 banner-float-card banner-float-card-c">
         <Image
           src="/assets/hero_card_group.png"
           alt="Hero Image"

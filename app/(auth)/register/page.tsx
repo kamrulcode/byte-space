@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { BarChart3, Clock3, MessageCircle, Star, Users } from "lucide-react";
 import Link from "next/link";
+import { signUp } from "@/lib/auth-client";
 
 const courses = [
   {
@@ -133,10 +134,26 @@ export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // Connect your registration API here.
-    console.log({ fullName, email, password });
+    console.log("Registering user:", fullName, email, password);
+    const { data, error } = await signUp.email({
+      name: fullName,
+      email: email,
+      password: password,
+      callbackURL: "/",
+    });
+    if (error) {
+      console.error("Signup error details:", {
+        status: error.status,
+        statusText: error.statusText,
+        message: error.message,
+        error,
+      });
+    }
+
+    console.log("Sign up response:", { data, error });
   }
 
   return (
@@ -153,7 +170,7 @@ export default function SignUpPage() {
 
       <div className="mainContainer">
         <div className=" py-10">
-          <Link href="/">
+          <Link href="/" className="inline-block">
             <Image
               src="/assets/Vector.png"
               alt="ByteSpace Logo"
@@ -167,7 +184,9 @@ export default function SignUpPage() {
           {/* Left side */}
           <section className="relative mx-auto min-h-125 w-full max-w-142.5 text-white lg:min-h-162.5">
             <div className="absolute left-0 top-0 z-30 max-w-120">
-              <h1 className="text-xl font-bold">Sign up and come in</h1>
+              <h1 className="text-xl font-bold font-poppins">
+                Sign up and come in
+              </h1>
 
               <p className="mt-3 text-lg leading-6 text-blue-100/90">
                 The registration process is straightforward, uncomplicated, and

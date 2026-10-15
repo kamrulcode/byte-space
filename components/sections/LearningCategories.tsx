@@ -42,7 +42,7 @@ export default function CategorySection() {
                 <Icon size={25} strokeWidth={2.5} />
               </span>
 
-              <span>{title}</span>
+              <span className=" font-bold">{title}</span>
             </button>
           ))}
         </div>

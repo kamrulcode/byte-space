@@ -2,31 +2,57 @@
 
 import { useEffect } from "react";
 
-/** Adds subtle reveal animations without changing the page layout or component design. */
+/**
+ * Adds scroll-reveal motion without changing React-managed DOM attributes.
+ * Using the Web Animations API avoids server/client className hydration mismatches.
+ */
 export default function ScrollAnimations() {
   useEffect(() => {
-    const targets = document.querySelectorAll<HTMLElement>(
-      ".logo-strip, .mainContainer, .course-card, .categories-section, .feature-section, .creator-banner, .testimonials-section, .site-footer, .category-card, .testimonial-card, .growth-visual, .management-copy"
-    );
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduceMotion.matches || !("IntersectionObserver" in window)) return;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (!("IntersectionObserver" in window)) return;
+    const selector = [
+      ".logo-strip",
+      ".mainContainer",
+      ".course-card",
+      ".categories-section",
+      ".feature-section",
+      ".creator-banner",
+      ".testimonials-section",
+      ".site-footer",
+      ".category-card",
+      ".testimonial-card",
+      ".growth-visual",
+      ".management-copy",
+    ].join(", ");
 
+    const animated = new WeakSet<HTMLElement>();
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
+          const target = entry.target as HTMLElement;
+          if (!entry.isIntersecting || animated.has(target)) return;
+
+          animated.add(target);
+          target.animate(
+            [
+              { opacity: 0, transform: "translate3d(0, 18px, 0)" },
+              { opacity: 1, transform: "translate3d(0, 0, 0)" },
+            ],
+            {
+              duration: 650,
+              delay: (Array.from(document.querySelectorAll<HTMLElement>(selector)).indexOf(target) % 6) * 65,
+              easing: "cubic-bezier(0.2, 0.65, 0.3, 1)",
+              fill: "both",
+            }
+          );
+          observer.unobserve(target);
         });
       },
       { threshold: 0.12, rootMargin: "0px 0px -35px 0px" }
     );
 
-    targets.forEach((target, index) => {
-      target.classList.add("motion-reveal");
-      target.style.setProperty("--motion-delay", `${Math.min(index % 6, 5) * 65}ms`);
+    document.querySelectorAll<HTMLElement>(selector).forEach((target) => {
       observer.observe(target);
     });
 

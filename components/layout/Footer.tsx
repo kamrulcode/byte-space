@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { AudioWaveform, CheckCircle2, Search } from "lucide-react";
+import Image from "next/image";
 
 const footerGroups = [
   ["Featured Courses", "Featured Categories", "Business", "IT", "Design"],
@@ -28,10 +29,11 @@ export default function Footer() {
         <div className="footer-main">
           <div className="footer-newsletter">
             <a href="/" className="footer-logo">
-              <AudioWaveform
-                size={34}
-                strokeWidth={3}
-                className="footer-logo-icon"
+              <Image
+                src="/assets/vector.png"
+                alt="ByteSpace Logo"
+                width={34}
+                height={34}
               />
 
               <span>ByteSpace</span>
